@@ -1,0 +1,11 @@
+/* ================================================================== */
+/* Digikala Business (DKB / دیجی‌کالا بیزینس) — Design System          */
+/* Global CSS entry point. Consumers link THIS one file.               */
+/* Source of truth: github.com/panahuxd/hAI (theme CE, Light, RTL).    */
+/* @import-only — all rules live in the imported files.                */
+/* ================================================================== */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./base.css";

@@ -1,0 +1,90 @@
+/* Landing page visual-style variants. Three on-brand directions that all use
+ * the hAI tokens (navy primary, IranYekanX, lucide). They differ in hero
+ * treatment, accent colour, card style, section rhythm and footer treatment.
+ * Consumed by landing-page.jsx via CSS custom properties on the page root. */
+window.LANDING_THEMES = [
+  {
+    id: "minimal",
+    label: "الف · مینیمال روشن",
+    vars: {
+      "--lp-accent": "#093672",          // navy
+      "--lp-accent-ink": "#093672",
+      "--lp-accent-soft": "#F3F6FB",     // faint navy tint
+      "--lp-hero-bg": "#FFFFFF",
+      "--lp-hero-fg": "#0A0A0A",
+      "--lp-hero-muted": "#737373",
+      "--lp-hero-panel": "#F5F7FA",
+      "--lp-section-alt": "#FFFFFF",
+      "--lp-card-bg": "#FFFFFF",
+      "--lp-card-border": "#E5E5E5",
+      "--lp-card-shadow": "none",
+      "--lp-card-radius": "10px",
+      "--lp-badge-bg": "#093672",
+      "--lp-badge-fg": "#FFFFFF",
+      "--lp-icon-bg": "#F3F6FB",
+      "--lp-icon-fg": "#093672",
+      "--lp-footer-bg": "#FFFFFF",
+      "--lp-footer-fg": "#0A0A0A",
+      "--lp-footer-muted": "#737373",
+      "--lp-footer-border": "#E5E5E5",
+      "--lp-rule": "#E5E5E5",
+    },
+    flags: { heroDark: false, footerDark: false, useDividers: true },
+  },
+  {
+    id: "warm",
+    label: "ب · اعتماد گرم (سرمه‌ای + طلایی)",
+    vars: {
+      "--lp-accent": "#B6862C",          // soft gold complementary
+      "--lp-accent-ink": "#093672",
+      "--lp-accent-soft": "#F8F3E9",     // warm tint
+      "--lp-hero-bg": "#FBF7EF",
+      "--lp-hero-fg": "#0A0A0A",
+      "--lp-hero-muted": "#6B6357",
+      "--lp-hero-panel": "#FFFFFF",
+      "--lp-section-alt": "#FBF7EF",
+      "--lp-card-bg": "#FFFFFF",
+      "--lp-card-border": "#ECE3D2",
+      "--lp-card-shadow": "0 1px 2px rgba(36,28,12,.04), 0 8px 24px rgba(36,28,12,.05)",
+      "--lp-card-radius": "14px",
+      "--lp-badge-bg": "#B6862C",
+      "--lp-badge-fg": "#FFFFFF",
+      "--lp-icon-bg": "#F8F3E9",
+      "--lp-icon-fg": "#093672",
+      "--lp-footer-bg": "#FFFFFF",
+      "--lp-footer-fg": "#0A0A0A",
+      "--lp-footer-muted": "#737373",
+      "--lp-footer-border": "#ECE3D2",
+      "--lp-rule": "#ECE3D2",
+    },
+    flags: { heroDark: false, footerDark: false, useDividers: false },
+  },
+  {
+    id: "bold",
+    label: "ج · سرمه‌ای جسور",
+    vars: {
+      "--lp-accent": "#093672",
+      "--lp-accent-ink": "#093672",
+      "--lp-accent-soft": "#EEF2F8",
+      "--lp-hero-bg": "#093672",         // dark navy hero
+      "--lp-hero-fg": "#FFFFFF",
+      "--lp-hero-muted": "rgba(255,255,255,.72)",
+      "--lp-hero-panel": "#0C3F84",
+      "--lp-section-alt": "#FAFAFA",
+      "--lp-card-bg": "#FFFFFF",
+      "--lp-card-border": "#EAEAEA",
+      "--lp-card-shadow": "0 1px 2px rgba(9,54,114,.05), 0 12px 32px rgba(9,54,114,.08)",
+      "--lp-card-radius": "16px",
+      "--lp-badge-bg": "#093672",
+      "--lp-badge-fg": "#FFFFFF",
+      "--lp-icon-bg": "#EEF2F8",
+      "--lp-icon-fg": "#093672",
+      "--lp-footer-bg": "#072B5C",
+      "--lp-footer-fg": "#FFFFFF",
+      "--lp-footer-muted": "rgba(255,255,255,.66)",
+      "--lp-footer-border": "rgba(255,255,255,.14)",
+      "--lp-rule": "#EAEAEA",
+    },
+    flags: { heroDark: true, footerDark: true, useDividers: false },
+  },
+];

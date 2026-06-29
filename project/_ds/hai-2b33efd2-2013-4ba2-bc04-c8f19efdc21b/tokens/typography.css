@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------ */
+/* Typography tokens — IranYekanX type scale (Tailwind v4 / shadcn).    */
+/* Values from primitives.json (fontSize / lineHeight / fontWeight /    */
+/* letterSpacing) and the @theme block in the repo's globals.css.       */
+/* ------------------------------------------------------------------ */
+:root {
+  /* Families */
+  --font-sans:  "IranYekanX", system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  /* Mono role uses the system monospace stack (the repo ships no mono webfont;
+     only IranYekanX is bundled). */
+  --font-mono:  ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Type scale (size / paired line-height) */
+  --text-xs:    0.75rem;   --text-xs--line-height:   1rem;     /* 12 / 16 */
+  --text-sm:    0.875rem;  --text-sm--line-height:   1.25rem;  /* 14 / 20 */
+  --text-base:  1rem;      --text-base--line-height: 1.5rem;   /* 16 / 24 */
+  --text-lg:    1.125rem;  --text-lg--line-height:   1.75rem;  /* 18 / 28 */
+  --text-xl:    1.25rem;   --text-xl--line-height:   1.75rem;  /* 20 / 28 */
+  --text-2xl:   1.5rem;    --text-2xl--line-height:  2rem;     /* 24 / 32 */
+  --text-3xl:   1.875rem;  --text-3xl--line-height:  2.25rem;  /* 30 / 36 */
+  --text-4xl:   2.25rem;   --text-4xl--line-height:  2.5rem;   /* 36 / 40 */
+  --text-5xl:   3rem;      --text-5xl--line-height:  3rem;     /* 48 / 48 */
+
+  /* Weights (IranYekanX ships 100–1000; these are the named roles) */
+  --font-weight-normal:    400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  /* Tracking */
+  --tracking-tight:  -0.4px;
+  --tracking-normal: 0px;
+}
