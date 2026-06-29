@@ -72,7 +72,9 @@
     .site-header {
       padding-block: 20px; border-bottom: 1px solid var(--border);
       position: sticky; top: 0; background: #fff; z-index: 50;
+      transition: transform .3s ease;
     }
+    .site-header.header-hidden { transform: translateY(-100%); }
     .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 
     /* ── HERO ── */
@@ -585,6 +587,21 @@
 </footer>
 
 <script>
+  // Hide header on scroll down, show on scroll up
+  (function() {
+    var header = document.querySelector('.site-header');
+    var lastY = 0;
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y > lastY && y > header.offsetHeight) {
+        header.classList.add('header-hidden');
+      } else {
+        header.classList.remove('header-hidden');
+      }
+      lastY = y;
+    }, { passive: true });
+  })();
+
   // Accordion
   document.querySelectorAll('.faq-trigger').forEach(function(trigger) {
     trigger.addEventListener('click', function() {
