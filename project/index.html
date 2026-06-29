@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>وام خرید ویژه کارکنان سازمان‌ها — دیجی‌کالا بیزینس</title>
+  <style>
+    @font-face { font-family: 'IRANYekanX'; font-weight: 300; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-Light.woff2') format('woff2'); }
+    @font-face { font-family: 'IRANYekanX'; font-weight: 400; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-Regular.woff2') format('woff2'); }
+    @font-face { font-family: 'IRANYekanX'; font-weight: 500; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-Medium.woff2') format('woff2'); }
+    @font-face { font-family: 'IRANYekanX'; font-weight: 600; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-DemiBold.woff2') format('woff2'); }
+    @font-face { font-family: 'IRANYekanX'; font-weight: 700; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-Bold.woff2') format('woff2'); }
+    @font-face { font-family: 'IRANYekanX'; font-weight: 800; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-ExtraBold.woff2') format('woff2'); }
+    @font-face { font-family: 'IRANYekanX'; font-weight: 900; src: url('_ds/hai-2b33efd2-2013-4ba2-bc04-c8f19efdc21b/fonts/IRANYekanX-Black.woff2') format('woff2'); }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #093672;
+      --navy-soft: #F3F6FB;
+      --fg: #0A0A0A;
+      --muted: #737373;
+      --border: #E5E5E5;
+      --radius: 10px;
+    }
+
+    html, body {
+      font-family: 'IRANYekanX', system-ui, sans-serif;
+      color: var(--fg);
+      background: #fff;
+      direction: rtl;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding-inline: 48px; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: inherit; font-weight: 600; border-radius: 8px;
+      cursor: pointer; transition: opacity .15s, background .15s, border-color .15s;
+      text-decoration: none; white-space: nowrap; line-height: 1;
+    }
+    .btn-solid { background: var(--navy); color: #fff; border: 1.5px solid var(--navy); padding: 12px 20px; font-size: 15px; }
+    .btn-solid:hover { opacity: .88; }
+    .btn-solid.lg { padding: 14px 24px; font-size: 16px; }
+    .btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--border); padding: 12px 20px; font-size: 15px; }
+    .btn-outline:hover { border-color: var(--navy); }
+    .btn-outline.lg { padding: 14px 24px; font-size: 16px; }
+
+    /* ── Section scaffold ── */
+    .section { padding-block: 96px; }
+    .section-alt { background: #fff; }
+    .section-divider { border-top: 1px solid var(--border); }
+
+    .section-head { margin-bottom: 48px; max-width: 680px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .kicker { font-size: 13px; font-weight: 700; color: var(--navy); letter-spacing: .2px; margin-bottom: 12px; }
+    h2 { font-size: 36px; line-height: 1.25; font-weight: 800; letter-spacing: -.5px; }
+    .section-sub { font-size: 18px; line-height: 1.8; color: var(--muted); margin-top: 16px; font-weight: 400; }
+
+    /* ── Image placeholder ── */
+    .img-ph {
+      background: var(--navy-soft); border-radius: 18px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; color: var(--muted); font-size: 13px; font-weight: 500;
+    }
+    .img-ph svg { opacity: .35; }
+
+    /* ── HEADER ── */
+    .site-header {
+      padding-block: 20px; border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; background: #fff; z-index: 50;
+    }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+    /* ── HERO ── */
+    .hero { padding-block: 64px 104px; }
+    .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: 56px; align-items: center; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--navy);
+      background: var(--navy-soft); border-radius: 999px;
+      padding: 7px 14px; letter-spacing: -.2px; margin-bottom: 24px;
+    }
+    h1 { font-size: 52px; line-height: 1.16; font-weight: 800; letter-spacing: -.6px; margin-bottom: 20px; max-width: 14ch; }
+    .hero-lead { font-size: 19px; line-height: 1.85; color: var(--muted); margin-bottom: 32px; max-width: 46ch; font-weight: 400; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 30px; }
+    .hero-trust { display: flex; gap: 22px; flex-wrap: wrap; }
+    .trust-item { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--muted); }
+    .trust-check {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--navy); color: #fff; flex-shrink: 0;
+    }
+
+    .hero-media { position: relative; }
+    .hero-img { width: 100%; height: 460px; }
+    .hero-badge {
+      position: absolute; inset-block-end: -22px; inset-inline-start: -22px;
+      background: #fff; border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,.10); border-radius: 14px;
+      padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+    }
+    .hero-badge-ico {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--navy-soft); color: var(--navy);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .hero-badge-label { font-size: 13px; color: var(--muted); line-height: 1.4; display: block; }
+    .hero-badge-val { font-size: 16px; font-weight: 700; line-height: 1.3; display: block; }
+
+    /* ── VALUES ── */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+    .card-icon { width: 52px; height: 52px; border-radius: 13px; background: var(--navy-soft); color: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .card p { font-size: 15px; line-height: 1.85; color: var(--muted); }
+
+    /* ── STEPS ── */
+    .grid-3-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .step-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 34px 32px 32px; position: relative; overflow: hidden; }
+    .step-wm {
+      position: absolute; inset-block-start: -12px; inset-inline-end: 20px;
+      font-size: 108px; font-weight: 800; line-height: 1;
+      color: var(--navy-soft); pointer-events: none; user-select: none;
+    }
+    .step-icon { position: relative; width: 54px; height: 54px; border-radius: 14px; background: var(--navy-soft); color: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .step-lbl { position: relative; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .step-title { position: relative; font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+    .step-desc { position: relative; font-size: 14.5px; line-height: 1.85; color: var(--muted); }
+    .steps-cta { display: flex; justify-content: center; margin-top: 44px; }
+
+    /* ── CATEGORIES ── */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .cat-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 24px; text-align: center; transition: transform .15s ease, box-shadow .15s ease; }
+    .cat-card:hover { transform: translateY(-3px); }
+    .cat-icon { width: 60px; height: 60px; border-radius: 16px; background: var(--navy-soft); color: var(--navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .cat-card p { font-size: 16.5px; font-weight: 700; }
+
+    /* ── MECHANISM ── */
+    .mech-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 56px; align-items: center; }
+    .mech-img { width: 100%; height: 380px; }
+    .timeline { position: relative; }
+    .tl-item { position: relative; padding-inline-start: 62px; padding-bottom: 34px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: ""; position: absolute; inset-inline-start: 21px;
+      top: 44px; bottom: -2px; width: 2px; background: var(--border);
+    }
+    .tl-item:last-child::before { display: none; }
+    .tl-num {
+      position: absolute; inset-inline-start: 0; top: 0;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy-soft); color: var(--navy);
+      border: 2px solid var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; font-weight: 700;
+    }
+    .tl-text { font-size: 17px; font-weight: 700; margin-top: 9px; line-height: 1.6; }
+
+    /* ── FAQ ── */
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding-block: 22px; background: none; border: none; cursor: pointer;
+      font-family: inherit; font-size: 16.5px; font-weight: 600; color: var(--fg); text-align: right;
+    }
+    .faq-trigger .chev { flex-shrink: 0; color: var(--muted); transition: transform .2s; }
+    .faq-item.open .chev { transform: rotate(180deg); }
+    .faq-body { font-size: 15px; line-height: 1.95; color: var(--muted); padding-bottom: 22px; display: none; }
+    .faq-item.open .faq-body { display: block; }
+
+    /* ── FOOTER ── */
+    .site-footer { border-top: 1px solid var(--border); }
+    .foot-top { padding-block: 22px; border-bottom: 1px solid var(--border); }
+    .foot-top .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .foot-contact { padding-block: 20px; border-bottom: 1px solid var(--border); }
+    .foot-contact .container { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .fc-main { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; }
+    .fc-phone { font-weight: 800; letter-spacing: .3px; }
+    .fc-sep { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
+    .fc-note { font-size: 14px; color: var(--muted); }
+    .foot-main { padding-block: 44px; }
+    .foot-main .container { display: grid; grid-template-columns: 1.6fr 1fr; gap: 48px; }
+    .foot-h { font-size: 16px; font-weight: 800; margin-bottom: 16px; }
+    .foot-p { font-size: 13.5px; line-height: 2.1; color: var(--muted); margin-bottom: 10px; max-width: 62ch; }
+    .foot-more { display: inline-flex; align-items: center; gap: 6px; color: var(--navy); font-weight: 700; font-size: 14px; margin-top: 6px; text-decoration: none; }
+    .social { display: flex; gap: 12px; margin-bottom: 26px; }
+    .social a { width: 42px; height: 42px; border-radius: 11px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--muted); transition: color .15s, border-color .15s; }
+    .social a:hover { color: var(--navy); border-color: var(--navy); }
+    .badges { display: flex; gap: 12px; flex-wrap: wrap; }
+    .badge-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px; width: 104px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .badge-slot { width: 72px; height: 72px; background: var(--navy-soft); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .badge-slot svg { opacity: .3; }
+    .badge-lbl { font-size: 10.5px; line-height: 1.5; color: var(--muted); text-align: center; }
+    .foot-copy { padding-block: 22px; border-top: 1px solid var(--border); }
+    .foot-copy .container { text-align: center; font-size: 12.5px; line-height: 2; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .container { padding-inline: 20px; }
+      .section { padding-block: 56px; }
+      .hero { padding-block: 32px 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      h1 { font-size: 33px; line-height: 1.2; max-width: none; }
+      .hero-lead { font-size: 16px; margin-bottom: 26px; }
+      .hero-img { height: 280px; }
+      .hero-badge { inset-inline-start: 12px; inset-block-end: -18px; padding: 11px 14px; }
+      .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
+      h2 { font-size: 26px; }
+      .section-sub { font-size: 15px; }
+      .section-head { margin-bottom: 32px; }
+      .grid-3, .grid-3-steps { grid-template-columns: 1fr; gap: 16px; }
+      .card { padding: 24px; }
+      .step-card { padding: 28px 26px; }
+      .steps-cta { margin-top: 30px; }
+      .steps-cta .btn { width: 100%; justify-content: center; }
+      .grid-4 { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .cat-card { padding: 22px 14px; }
+      .cat-icon { width: 50px; height: 50px; border-radius: 14px; margin-bottom: 14px; }
+      .cat-card p { font-size: 14px; }
+      .mech-grid { grid-template-columns: 1fr; gap: 32px; }
+      .mech-img { height: 230px; }
+      .foot-main .container { grid-template-columns: 1fr; gap: 36px; }
+      .fc-sep { display: none; }
+      .foot-top .btn-outline { font-size: 13px; padding: 10px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="container">
+    <a href="#" aria-label="دیجی‌کالا بیزینس">
+      <svg viewBox="0 0 1272 128" height="30" fill="currentColor" style="color:#093672;display:block;" aria-hidden="true">
+        <path d="M1268.36 32.1419L1239.13 2.90585C1236.33 0.10585 1231.67 0.35585 1229.27 3.50385C1200.69 40.9268 1153.32 65.4069 1099.7 65.4149C1046.08 65.4069 998.707 40.9268 970.136 3.50385C967.731 0.35585 963.074 0.10585 960.274 2.90585L931.038 32.1419C927.053 36.1269 926.665 42.5129 930.25 46.8609C970.483 95.6829 1031.4 126.815 1099.59 126.848V126.85H1099.7H1099.81V126.848C1168 126.815 1228.92 95.6829 1269.15 46.8609C1272.73 42.5129 1272.35 36.1269 1268.36 32.1419Z"/>
+        <path d="M846.285 27.9792L820.873 27.9382C819.845 27.9382 818.859 28.3472 818.132 29.0742L811.411 35.7952C810.683 36.5222 810.274 37.5082 810.274 38.5362V42.4792C810.274 44.3812 811.816 45.9222 813.719 45.9222L849.861 45.9052C852.822 45.9052 855.225 48.3072 855.225 51.2692V76.3962C855.225 79.3582 852.822 81.7602 849.861 81.7602L849.847 81.7692H836.047C836.015 81.7692 835.982 81.7602 835.95 81.7602H813.835C811.869 81.7602 810.274 83.3522 810.274 85.3182V96.1292C810.274 98.0952 811.869 99.6892 813.835 99.6892H826.82H846.285C861.125 99.6892 873.15 87.6582 873.15 72.8192V54.8442C873.15 40.0072 861.125 27.9792 846.285 27.9792Z"/>
+        <path d="M423.945 70.6782C424.468 72.1132 425.832 73.0662 427.36 73.0662L438.518 73.0732C441.003 73.0732 442.735 70.6042 441.885 68.2682L423.945 21.3172C423.429 19.8962 422.077 18.9472 420.562 18.9472H409.509C407.052 18.9472 405.341 21.3852 406.175 23.6932L423.945 70.6782Z"/>
+        <path d="M734.905 108.866H723.674C721.809 108.866 720.298 110.378 720.298 112.242V123.473C720.298 125.338 721.809 126.85 723.674 126.85H734.905C736.77 126.85 738.283 125.338 738.283 123.473V112.242C738.283 110.378 736.77 108.866 734.905 108.866Z"/>
+        <path d="M797.699 108.866H768.774C766.83 108.866 765.252 110.444 765.252 112.388V123.328C765.252 125.274 766.83 126.85 768.774 126.85H797.699C799.644 126.85 801.22 125.274 801.22 123.328V112.388C801.22 110.444 799.644 108.866 797.699 108.866Z"/>
+        <path d="M567.738 27.9388H560.312L584.94 4.53877C586.205 3.17877 585.241 0.962776 583.383 0.962776H565.182C563.769 0.962776 562.411 1.51978 561.405 2.51177L523.522 39.8528C521.286 42.0908 522.871 45.9138 526.033 45.9138L567.902 45.9228C572.741 45.9208 576.665 50.0758 576.665 54.9148V81.8998L509.942 81.8548C507.012 81.8548 504.634 79.4768 504.634 76.5448L504.633 22.4688C504.633 20.5238 503.055 18.9468 501.111 18.9468H490.41C488.463 18.9468 486.887 20.5228 486.887 22.4688L486.956 74.3478C487.656 88.4078 499.248 99.5988 513.482 99.5988L590.889 99.6448C592.834 99.6448 594.41 98.0668 594.41 96.1208L594.287 54.0908C593.803 39.8268 582.119 27.9388 567.738 27.9388Z"/>
+        <path d="M474.375 18.9468H463.674C461.727 18.9468 460.149 20.5248 460.149 22.4688V76.8198C460.149 79.7538 457.775 82.1298 454.843 82.1298L416.692 82.0818C415.663 82.0818 414.677 82.4898 413.95 83.2168L407.097 89.7468C406.371 90.4738 405.962 91.4598 405.962 92.4878V96.4308C405.962 98.3328 407.502 99.8738 409.405 99.8738H451.301C465.537 99.8738 477.127 88.6828 477.83 74.6228L477.896 22.4688C477.896 20.5248 476.32 18.9468 474.375 18.9468Z"/>
+        <path d="M801.147 74.1626L801.215 49.4496C801.215 47.4826 799.621 45.8866 797.651 45.8866H786.824C784.856 45.8866 783.26 47.4816 783.26 49.4496L783.258 76.3866C783.258 79.3526 780.853 81.7566 777.887 81.7566H738.317V54.8206C738.317 37.4596 725.879 27.9386 711.327 27.9386H685.937C684.908 27.9386 683.923 28.3466 683.195 29.0736L676.473 35.7956C675.747 36.5226 675.338 37.5086 675.338 38.5366V42.4786C675.338 44.3806 676.88 45.9226 678.783 45.9226L714.908 45.8936C717.876 45.8936 720.281 48.2986 720.281 51.2656L720.359 81.7586L660.919 81.8906C658.952 81.8906 657.355 83.4846 657.355 85.4516V96.3086C657.355 98.2776 658.952 99.8746 660.921 99.8746H675.338V103.523C675.338 106.49 672.933 108.896 669.965 108.896L626.233 108.869C623.556 108.868 621.385 106.697 621.384 104.02L621.36 67.4676C621.36 65.4986 619.763 63.9066 617.794 63.9066H606.966C604.999 63.9066 603.402 65.4986 603.402 67.4676L603.469 99.9396C603.402 117.858 612.395 126.85 630.379 126.85H666.74C682.675 126.85 693.321 116.64 693.321 99.8746H734.751C736.72 99.8746 738.317 98.2776 738.317 96.3086V90.7336L738.367 90.7796L746.235 98.8206C746.895 99.4946 747.797 99.8746 748.739 99.8746H774.304C788.709 99.8746 800.436 88.3876 801.147 74.1626Z"/>
+        <path d="M252.591 49.2326C252.591 47.3216 251.093 45.7736 249.21 45.6666H237.905C236.021 45.7736 234.523 47.3216 234.523 49.2326V76.3356C234.523 79.3216 232.103 81.7426 229.117 81.7426H198.386L198.335 81.7796L198.338 48.9946C198.338 47.0836 196.839 45.5356 194.955 45.4286H183.652C181.768 45.5356 180.269 47.0836 180.269 48.9946L180.267 81.7426L143.708 81.7046C144.269 79.6536 144.575 77.4986 144.577 75.2726C144.589 62.2516 144.595 48.7266 144.595 48.7266C144.595 46.8796 143.101 45.3876 141.257 45.3876H129.95C128.107 45.3876 126.613 46.8816 126.613 48.7246L126.652 76.3866C126.652 79.1636 124.4 81.4156 121.623 81.4156H107.158C107.947 79.1746 108.394 76.7476 108.516 74.2666C108.584 72.3966 108.584 48.8196 108.584 48.8196C108.584 46.9726 107.293 45.3876 105.452 45.3876H93.9288C92.0878 45.3876 90.5958 46.9726 90.5958 48.8136V76.5156C90.5958 79.2006 88.4198 81.3766 85.7348 81.3766L77.5438 81.3986C74.9018 81.3986 72.7518 79.5156 72.5588 76.9206V48.2026C72.5588 46.6606 71.3088 45.4096 69.7658 45.4096L57.3448 45.3876C55.8008 45.3876 54.5508 46.6396 54.5518 48.1826L54.5848 100.398C54.5848 106.337 51.9768 108.408 47.5268 108.408H25.2378C20.7888 108.408 18.5568 105.513 18.5568 101.692V66.7296C18.5568 64.8876 16.9428 63.3936 15.1008 63.3936H3.88678C2.04478 63.3936 0.550781 64.8876 0.550781 66.7296V101.223C0.550781 115.135 11.8288 126.413 25.7408 126.413H47.2688C61.0838 126.413 72.5908 115.214 72.5908 101.399V97.6406C74.8138 99.3856 84.0518 99.4626 84.0518 99.4626C92.3678 99.4626 95.0218 98.1176 98.8258 95.7986L102.08 98.7566C102.475 99.1506 103.008 99.3766 103.566 99.3766L120.553 99.4426C127.674 99.4696 134.043 96.3636 138.431 91.4326L145.949 98.9486C146.37 99.3676 146.943 99.6076 147.537 99.6076L194.749 99.8116C196.729 99.8116 198.335 98.2056 198.335 96.2246V90.8226L198.349 90.8216L206.676 99.1466C207.1 99.5726 207.677 99.8116 208.278 99.8116H225.514C240.007 99.8116 251.807 88.4156 252.524 74.0986C252.567 73.8766 252.591 49.2326 252.591 49.2326Z"/>
+        <path d="M183.37 36.5806H194.73C196.566 36.5806 198.056 35.0926 198.056 33.2536V21.8896C198.056 20.0506 196.566 18.5626 194.73 18.5626H183.37C181.531 18.5626 180.043 20.0506 180.043 21.8896V33.2536C180.043 35.0926 181.531 36.5806 183.37 36.5806Z"/>
+        <path d="M338.731 108.945H327.846L327.587 108.971L327.328 108.945H309.797C307.819 108.945 306.216 110.549 306.216 112.526V123.503C306.216 125.483 307.819 127.087 309.797 127.087H327.328L327.587 127.059L327.846 127.087H338.731C340.709 127.087 342.312 125.483 342.312 123.503V112.526C342.312 110.549 340.709 108.945 338.731 108.945Z"/>
+        <path d="M229.525 109.445H218.64L218.381 109.471L218.122 109.445H200.591C198.613 109.445 197.011 111.049 197.011 113.028V124.003C197.011 125.983 198.613 127.587 200.591 127.587H218.122L218.381 127.559L218.64 127.587H229.525C231.504 127.587 233.106 125.983 233.106 124.003V113.028C233.106 111.049 231.504 109.445 229.525 109.445Z"/>
+        <path d="M393.183 108.935H382.287C380.307 108.935 378.701 110.541 378.701 112.521V123.509C378.701 125.49 380.307 127.094 382.287 127.094H393.183C395.163 127.094 396.769 125.49 396.769 123.509V112.521C396.769 110.541 395.163 108.935 393.183 108.935Z"/>
+        <path d="M273.859 36.405H284.664C286.629 36.405 288.221 34.813 288.221 32.85V21.953C288.221 19.986 286.629 18.396 284.664 18.396H273.859C271.892 18.396 270.302 19.986 270.302 21.953V32.85C270.302 34.813 271.892 36.405 273.859 36.405Z"/>
+        <path d="M396.537 48.5241L396.447 48.2231C396.41 48.1041 396.384 47.9821 396.336 47.8681C396.279 47.7301 396.202 47.6031 396.13 47.4741L396.024 47.2781C395.921 47.1211 395.8 46.9771 395.677 46.8411L395.616 46.7671C395.468 46.6091 395.302 46.4681 395.127 46.3411L395.122 46.3381C394.584 45.9461 393.933 45.7081 393.226 45.6661L393.022 45.6471H382.127L381.921 45.6661C381.214 45.7081 380.564 45.9461 380.025 46.3381L380.02 46.3411C379.845 46.4681 379.682 46.6091 379.533 46.7651L379.47 46.8431C379.345 46.9811 379.226 47.1221 379.123 47.2781L379.018 47.4731C378.944 47.6031 378.869 47.7301 378.811 47.8681C378.765 47.9821 378.736 48.1031 378.702 48.2231L378.61 48.5241C378.565 48.7531 378.54 48.9881 378.54 49.2321V76.3371C378.54 79.3221 376.119 81.7441 373.133 81.7441H342.403L342.351 81.7791L342.354 49.2321C342.354 47.3211 340.855 45.7741 338.973 45.6661H327.668C325.785 45.7741 324.285 47.3211 324.285 49.2321L324.283 81.7441L288.233 81.6711L288.215 81.6541V81.7661L288.214 81.7731L288.256 48.9301C288.256 46.9861 286.672 45.4091 284.719 45.4091H273.753C271.798 45.4091 270.214 46.9861 270.214 48.9301V103.231C270.214 106.165 267.829 108.538 264.883 108.538L254.066 108.49C253.032 108.49 252.042 108.899 251.313 109.626L244.428 116.292C243.698 117.019 243.289 118.003 243.289 119.03V122.97C243.289 124.873 244.836 126.412 246.748 126.412H261.542C275.842 126.412 287.484 115.37 288.188 101.318L288.202 90.7121L288.215 90.7131L296.473 98.9711C296.894 99.3921 297.466 99.6281 298.064 99.6281L336.527 99.8021V99.8111H338.766C340.746 99.8111 342.351 98.2061 342.351 96.2261V90.8231L342.366 90.8211L350.692 99.1481C351.118 99.5721 351.694 99.8111 352.296 99.8111H369.53C384.025 99.8111 395.823 88.4151 396.54 74.1001C396.582 73.8781 396.607 49.2321 396.607 49.2321C396.607 48.9881 396.582 48.7521 396.537 48.5241Z"/>
+      </svg>
+    </a>
+    <button class="btn btn-solid" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">
+      دریافت وام
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero section" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          ویژه کارکنان سازمان‌ها
+        </span>
+        <h1>وام خرید ویژه کارکنان سازمان‌ها</h1>
+        <p class="hero-lead">با معرفی از طرف سازمان‌تان، فرآیند دریافت وام را به‌صورت آنلاین تکمیل کنید و از فروشگاه اختصاصی سازمان خود خرید کنید.</p>
+        <div class="hero-cta">
+          <button class="btn btn-solid lg">
+            دریافت وام
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+          <button class="btn btn-outline lg">مشاهده مراحل</button>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item">
+            <span class="trust-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            آنلاین و امن
+          </span>
+          <span class="trust-item">
+            <span class="trust-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            بدون مراجعه حضوری
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="img-ph hero-img">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>ترکیب محصولات لوازم خانگی برقی</span>
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          </span>
+          <span>
+            <span class="hero-badge-label">اعتبار خرید سازمانی</span>
+            <span class="hero-badge-val">فعال‌سازی آنلاین</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALUES ═══ -->
+<section class="section section-divider">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">چرا این وام؟</div>
+      <h2>یک مسیر ساده، امن و کاملاً آنلاین</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3>آنلاین و امن</h3>
+        <p>ثبت‌نام و احراز هویت در محیط امن بانک و به‌صورت کاملاً آنلاین انجام می‌شود.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/><path d="M10 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2"/><rect x="10" y="14" width="12" height="10" rx="2"/><path d="M13 19h5"/></svg>
+        </div>
+        <h3>بدون مراجعه حضوری</h3>
+        <p>برای شروع فرآیند دریافت تسهیلات نیازی به مراجعه حضوری ندارید.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>
+        </div>
+        <h3>قابل استفاده در فروشگاه سازمانی</h3>
+        <p>اعتبار فقط در فروشگاه یا پرتال اختصاصی سازمان شما قابل استفاده است.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STEPS ═══ -->
+<section class="section section-divider">
+  <div class="container">
+    <div class="section-head center">
+      <div class="kicker">شروع سریع</div>
+      <h2>فقط در ۳ مرحله اعتبار خرید خود را فعال کنید</h2>
+    </div>
+    <div class="grid-3-steps">
+      <div class="step-card">
+        <span class="step-wm">۱</span>
+        <div class="step-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+        </div>
+        <p class="step-lbl">مرحله اول</p>
+        <h3 class="step-title">معرفی توسط سازمان</h3>
+        <p class="step-desc">اطلاعات شما از طرف سازمان‌تان برای دریافت وام معرفی می‌شود.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-wm">۲</span>
+        <div class="step-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m3 15 2 2 4-4"/></svg>
+        </div>
+        <p class="step-lbl">مرحله دوم</p>
+        <h3 class="step-title">ثبت‌نام و احراز هویت آنلاین</h3>
+        <p class="step-desc">فرایند ثبت‌نام و احراز هویت را در محیط امن بانک اقتصاد نوین تکمیل می‌کنید.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-wm">۳</span>
+        <div class="step-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <p class="step-lbl">مرحله سوم</p>
+        <h3 class="step-title">فعال‌سازی وام و خرید آسان</h3>
+        <p class="step-desc">پس از تایید بانک، وام شما فعال می‌شود و می‌توانید از فروشگاه اختصاصی سازمان خرید کنید.</p>
+      </div>
+    </div>
+    <div class="steps-cta">
+      <button class="btn btn-solid lg">
+        شروع فرایند دریافت وام
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CATEGORIES ═══ -->
+<section class="section section-divider">
+  <div class="container">
+    <div class="section-head center">
+      <div class="kicker">فروشگاه اختصاصی سازمان</div>
+      <h2>خرید کالاهای موردنیاز از فروشگاه اختصاصی سازمان شما</h2>
+      <p class="section-sub">مجموعه‌ای از کالاها و خدمات منتخب، متناسب با نیازهای کارکنان سازمان شما.</p>
+    </div>
+    <div class="grid-4">
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </div>
+        <p>کالاهای سوپرمارکتی</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+        </div>
+        <p>طلا و زیورآلات</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+        </div>
+        <p>کارت هدیه</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+        </div>
+        <p>تجهیزات الکترونیک</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MECHANISM ═══ -->
+<section class="section section-divider">
+  <div class="container">
+    <div class="mech-grid">
+      <div>
+        <div class="img-ph mech-img">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>ایلوستریشن: خرید اقساطی و بازپرداخت</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:28px">
+          <div class="kicker">سازوکار کامل</div>
+          <h2>سازوکار استفاده از وام بانک اقتصاد نوین</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-num">۱</div>
+            <p class="tl-text">معرفی شما از طرف سازمان برای دریافت وام</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-num">۲</div>
+            <p class="tl-text">تکمیل ثبت‌نام و احراز هویت در محیط امن بانک</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-num">۳</div>
+            <p class="tl-text">فعال‌سازی وام در دیجی‌کالا بیزنس پس از تایید بانک</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-num">۴</div>
+            <p class="tl-text">خرید از فروشگاه اختصاصی سازمان و پرداخت اقساط در سررسیدهای مشخص</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section section-divider">
+  <div class="container">
+    <div class="section-head center">
+      <div class="kicker">پشتیبانی</div>
+      <h2>سوالات متداول</h2>
+    </div>
+    <div class="faq-inner">
+      <div class="faq-item open">
+        <button class="faq-trigger" aria-expanded="true">
+          چه کسانی می‌توانند از این وام استفاده کنند؟
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-body">کارکنان سازمان‌هایی که با دیجی‌کالا بیزینس و بانک اقتصاد نوین همکاری دارند و از طرف سازمان خود برای دریافت وام معرفی شده‌اند.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          آیا برای دریافت وام نیاز به مراجعه حضوری دارم؟
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-body">خیر؛ تمام مراحل ثبت‌نام و احراز هویت به‌صورت کاملاً آنلاین و در محیط امن بانک اقتصاد نوین انجام می‌شود.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          اعتبار وام را کجا می‌توانم استفاده کنم؟
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-body">اعتبار تنها در فروشگاه یا پرتال اختصاصی سازمان شما در دیجی‌کالا بیزینس قابل استفاده است.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          بازپرداخت وام چگونه انجام می‌شود؟
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-body">بازپرداخت به‌صورت اقساطی و در سررسیدهای مشخص‌شده توسط بانک اقتصاد نوین انجام می‌شود.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          چه کالاهایی را می‌توانم خریداری کنم؟
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-body">کالاهای سوپرمارکتی، طلا و زیورآلات، کارت هدیه و تجهیزات الکترونیک از جمله دسته‌بندی‌های در دسترس هستند.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="container">
+      <button class="btn btn-outline" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+        بازگشت به بالا
+      </button>
+      <a href="#" aria-label="دیجی‌کالا بیزینس">
+        <svg viewBox="0 0 1272 128" height="28" fill="currentColor" style="color:#093672;display:block;" aria-hidden="true">
+          <path d="M1268.36 32.1419L1239.13 2.90585C1236.33 0.10585 1231.67 0.35585 1229.27 3.50385C1200.69 40.9268 1153.32 65.4069 1099.7 65.4149C1046.08 65.4069 998.707 40.9268 970.136 3.50385C967.731 0.35585 963.074 0.10585 960.274 2.90585L931.038 32.1419C927.053 36.1269 926.665 42.5129 930.25 46.8609C970.483 95.6829 1031.4 126.815 1099.59 126.848V126.85H1099.7H1099.81V126.848C1168 126.815 1228.92 95.6829 1269.15 46.8609C1272.73 42.5129 1272.35 36.1269 1268.36 32.1419Z"/><path d="M846.285 27.9792L820.873 27.9382C819.845 27.9382 818.859 28.3472 818.132 29.0742L811.411 35.7952C810.683 36.5222 810.274 37.5082 810.274 38.5362V42.4792C810.274 44.3812 811.816 45.9222 813.719 45.9222L849.861 45.9052C852.822 45.9052 855.225 48.3072 855.225 51.2692V76.3962C855.225 79.3582 852.822 81.7602 849.861 81.7602L849.847 81.7692H836.047C836.015 81.7692 835.982 81.7602 835.95 81.7602H813.835C811.869 81.7602 810.274 83.3522 810.274 85.3182V96.1292C810.274 98.0952 811.869 99.6892 813.835 99.6892H826.82H846.285C861.125 99.6892 873.15 87.6582 873.15 72.8192V54.8442C873.15 40.0072 861.125 27.9792 846.285 27.9792Z"/><path d="M567.738 27.9388H560.312L584.94 4.53877C586.205 3.17877 585.241 0.962776 583.383 0.962776H565.182C563.769 0.962776 562.411 1.51978 561.405 2.51177L523.522 39.8528C521.286 42.0908 522.871 45.9138 526.033 45.9138L567.902 45.9228C572.741 45.9208 576.665 50.0758 576.665 54.9148V81.8998L509.942 81.8548C507.012 81.8548 504.634 79.4768 504.634 76.5448L504.633 22.4688C504.633 20.5238 503.055 18.9468 501.111 18.9468H490.41C488.463 18.9468 486.887 20.5228 486.887 22.4688L486.956 74.3478C487.656 88.4078 499.248 99.5988 513.482 99.5988L590.889 99.6448C592.834 99.6448 594.41 98.0668 594.41 96.1208L594.287 54.0908C593.803 39.8268 582.119 27.9388 567.738 27.9388Z"/><path d="M474.375 18.9468H463.674C461.727 18.9468 460.149 20.5248 460.149 22.4688V76.8198C460.149 79.7538 457.775 82.1298 454.843 82.1298L416.692 82.0818C415.663 82.0818 414.677 82.4898 413.95 83.2168L407.097 89.7468C406.371 90.4738 405.962 91.4598 405.962 92.4878V96.4308C405.962 98.3328 407.502 99.8738 409.405 99.8738H451.301C465.537 99.8738 477.127 88.6828 477.83 74.6228L477.896 22.4688C477.896 20.5248 476.32 18.9468 474.375 18.9468Z"/><path d="M252.591 49.2326C252.591 47.3216 251.093 45.7736 249.21 45.6666H237.905C236.021 45.7736 234.523 47.3216 234.523 49.2326V76.3356C234.523 79.3216 232.103 81.7426 229.117 81.7426H198.386L198.335 81.7796L198.338 48.9946C198.338 47.0836 196.839 45.5356 194.955 45.4286H183.652C181.768 45.5356 180.269 47.0836 180.269 48.9946L180.267 81.7426L143.708 81.7046C144.269 79.6536 144.575 77.4986 144.577 75.2726C144.589 62.2516 144.595 48.7266 144.595 48.7266C144.595 46.8796 143.101 45.3876 141.257 45.3876H129.95C128.107 45.3876 126.613 46.8816 126.613 48.7246L126.652 76.3866C126.652 79.1636 124.4 81.4156 121.623 81.4156H107.158C107.947 79.1746 108.394 76.7476 108.516 74.2666C108.584 72.3966 108.584 48.8196 108.584 48.8196C108.584 46.9726 107.293 45.3876 105.452 45.3876H93.9288C92.0878 45.3876 90.5958 46.9726 90.5958 48.8136V76.5156C90.5958 79.2006 88.4198 81.3766 85.7348 81.3766L77.5438 81.3986C74.9018 81.3986 72.7518 79.5156 72.5588 76.9206V48.2026C72.5588 46.6606 71.3088 45.4096 69.7658 45.4096L57.3448 45.3876C55.8008 45.3876 54.5508 46.6396 54.5518 48.1826L54.5848 100.398C54.5848 106.337 51.9768 108.408 47.5268 108.408H25.2378C20.7888 108.408 18.5568 105.513 18.5568 101.692V66.7296C18.5568 64.8876 16.9428 63.3936 15.1008 63.3936H3.88678C2.04478 63.3936 0.550781 64.8876 0.550781 66.7296V101.223C0.550781 115.135 11.8288 126.413 25.7408 126.413H47.2688C61.0838 126.413 72.5908 115.214 72.5908 101.399V97.6406C74.8138 99.3856 84.0518 99.4626 84.0518 99.4626C92.3678 99.4626 95.0218 98.1176 98.8258 95.7986L102.08 98.7566C102.475 99.1506 103.008 99.3766 103.566 99.3766L120.553 99.4426C127.674 99.4696 134.043 96.3636 138.431 91.4326L145.949 98.9486C146.37 99.3676 146.943 99.6076 147.537 99.6076L194.749 99.8116C196.729 99.8116 198.335 98.2056 198.335 96.2246V90.8226L198.349 90.8216L206.676 99.1466C207.1 99.5726 207.677 99.8116 208.278 99.8116H225.514C240.007 99.8116 251.807 88.4156 252.524 74.0986C252.567 73.8766 252.591 49.2326 252.591 49.2326Z"/><path d="M183.37 36.5806H194.73C196.566 36.5806 198.056 35.0926 198.056 33.2536V21.8896C198.056 20.0506 196.566 18.5626 194.73 18.5626H183.37C181.531 18.5626 180.043 20.0506 180.043 21.8896V33.2536C180.043 35.0926 181.531 36.5806 183.37 36.5806Z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="foot-contact">
+    <div class="container">
+      <span class="fc-main">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#093672" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+        ارتباط با واحد فروش
+        <span class="fc-phone">۰۲۱ - ۶۱۹۳۰۰۰۰</span>
+      </span>
+      <span class="fc-sep"></span>
+      <span class="fc-note">هفت روز هفته، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم.</span>
+    </div>
+  </div>
+
+  <div class="foot-main">
+    <div class="container">
+      <div>
+        <h4 class="foot-h">فروشگاه اینترنتی دیجی‌کالا بیزینس، خرید عمده آسان</h4>
+        <p class="foot-p">یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب را در مدت‌زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست روی آن‌ها کار کرده است.</p>
+        <p class="foot-p">یکی از مهم‌ترین دغدغه‌های کاربران دیجی‌کالا این است که کالای خریداری‌شده چه زمانی به دستشان می‌رسد. دیجی‌کالا شیوه‌های مختلفی از ارسال را متناسب با فروشنده در نظر گرفته است.</p>
+        <a href="#" class="foot-more">مشاهده بیشتر <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+      </div>
+      <div>
+        <h4 class="foot-h">شبکه‌های اجتماعی</h4>
+        <div class="social">
+          <a href="#" aria-label="آپارات">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.9 6.2c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM7.1 8.2c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S5.6 10.53 5.6 9.7s.67-1.5 1.5-1.5zm0 5.1c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm9.8 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM12 9.6c1.32 0 2.4 1.08 2.4 2.4s-1.08 2.4-2.4 2.4S9.6 13.32 9.6 12 10.68 9.6 12 9.6z"/></svg>
+          </a>
+          <a href="#" aria-label="لینکدین">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10.4H5.67v7.94h2.67zM7 9.24a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.1v-4.36c0-2.33-1.24-3.41-2.9-3.41-1.34 0-1.94.74-2.27 1.26v-1.08h-2.67c.04.75 0 7.94 0 7.94h2.67v-4.43c0-.24.02-.48.09-.65.19-.48.63-.97 1.36-.97.96 0 1.35.73 1.35 1.8v4.25h2.64z"/></svg>
+          </a>
+          <a href="#" aria-label="توییتر">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2.5h3.3l-7.2 8.2L23.5 21.5h-6.6l-5.2-6.8-5.9 6.8H2.5l7.7-8.8L1.3 2.5h6.8l4.7 6.2 5.3-6.2zm-1.2 17h1.8L7.3 4.4H5.4l12.3 15.1z"/></svg>
+          </a>
+          <a href="#" aria-label="اینستاگرام">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.46 2.2 8.84 2.2 12 2.2zm0 1.8c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.25-2.19.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.42-.36 1.04-.41 2.19C2.35 8.48 2.34 8.85 2.34 12s.01 3.52.07 4.76c.05 1.15.25 1.77.41 2.19.21.55.47.94.88 1.35.41.41.8.67 1.35.88.42.16 1.04.36 2.19.41 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.25 2.19-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.42.36-1.04.41-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.25-1.77-.41-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.36-2.19-.41C15.52 4.01 15.15 4 12 4zm0 3.06A4.94 4.94 0 1 1 12 16.94 4.94 4.94 0 0 1 12 7.06zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.28-2.01a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+          </a>
+        </div>
+        <div class="badges">
+          <div class="badge-card">
+            <div class="badge-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#093672" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <span class="badge-lbl">نماد اعتماد الکترونیکی</span>
+          </div>
+          <div class="badge-card">
+            <div class="badge-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#093672" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <span class="badge-lbl">اتحادیه کسب‌وکارهای مجازی</span>
+          </div>
+          <div class="badge-card">
+            <div class="badge-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#093672" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
+            <span class="badge-lbl">ساماندهی</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-copy">
+    <div class="container">
+      استفاده از مطالب فروشگاه اینترنتی دیجی‌کالا فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است.
+      کلیه حقوق این سایت متعلق به شرکت نوآوران فن‌آوازه (فروشگاه آنلاین دیجی‌کالا) می‌باشد.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Accordion
+  document.querySelectorAll('.faq-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function() {
+      var item = trigger.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+</body>
+</html>
